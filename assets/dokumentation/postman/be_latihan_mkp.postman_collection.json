@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "615ae0f1-679a-4a44-90a6-b0d647659584",
+		"name": "be_latihan_mkp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28167229"
+	},
+	"item": [
+		{
+			"name": "studios",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/jadwal-tayang"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL BY ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/jadwal-tayang/113c15b4-8ff3-464c-adb1-9d52321d3cdb"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movie_id\": \"d6e42bdf-829d-45bf-b921-8be848ad1a1b\",\r\n    \"name_studio\": \"Studio 1\",\r\n    \"starting\": \"2025-10-08T14:30:00+07:00\",\r\n    \"ending\": \"2025-10-08T16:45:00+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/jadwal-tayang"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name_studio\": \"Studio 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/jadwal-tayang/7c80e8c9-24dc-4bb3-b7b9-c225116bed61"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/jadwal-tayang/113c15b4-8ff3-464c-adb1-9d52321d3cdb"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/movie"
+					},
+					"response": [
+						{
+							"name": "GET ALL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/movie"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Oct 2025 02:44:04 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "137"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Berhasil mendapatkan semua film\",\n    \"data\": [\n        {\n            \"id\": \"d6e42bdf-829d-45bf-b921-8be848ad1a1b\",\n            \"title\": \"movie 1\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GEET BY ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/movie/d6e42bdf-829d-45bf-b921-8be848ad1a1b"
+					},
+					"response": [
+						{
+							"name": "GEET BY ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/movie/d6e42bdf-829d-45bf-b921-8be848ad1a1b"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Oct 2025 02:43:37 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "610"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Berhasil mendapatkan detail film\",\n    \"data\": {\n        \"id\": \"d6e42bdf-829d-45bf-b921-8be848ad1a1b\",\n        \"title\": \"movie 1\",\n        \"jam_tayang\": [\n            {\n                \"movie_id\": \"d6e42bdf-829d-45bf-b921-8be848ad1a1b\",\n                \"name_studio\": \"Studio 1\",\n                \"starting\": \"2025-10-08T14:30:00+07:00\",\n                \"ending\": \"2025-10-08T16:45:00+07:00\"\n            },\n            {\n                \"movie_id\": \"d6e42bdf-829d-45bf-b921-8be848ad1a1b\",\n                \"name_studio\": \"Studio 1\",\n                \"starting\": \"2025-10-09T14:30:00+07:00\",\n                \"ending\": \"2025-10-09T16:45:00+07:00\"\n            },\n            {\n                \"movie_id\": \"d6e42bdf-829d-45bf-b921-8be848ad1a1b\",\n                \"name_studio\": \"Studio 1\",\n                \"starting\": \"2025-10-10T14:30:00+07:00\",\n                \"ending\": \"2025-10-10T16:45:00+07:00\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"movie 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/movie"
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"movie 2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/movie"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Oct 2025 02:44:30 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Berhasil menambahkan film\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "EDIT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"movie 1 part 2 episode 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/movie/d6e42bdf-829d-45bf-b921-8be848ad1a1b"
+					},
+					"response": [
+						{
+							"name": "EDIT",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tilte\":\"movie 1 part 2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/movie/a77e0026-5a7d-4ed0-9dd3-527c3cc42cca"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Oct 2025 02:45:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Berhasil memperbarui film\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0ZGUwMTM4LTM1NWMtNDA3ZC05ODMzLTA1MWJmZGYwZjZhZiIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6InNvYWxfbWtwIiwiZXhwIjoxNzYyNDgxODU4LCJpYXQiOjE3NTk4ODk4NTh9.6XcNEPPkENnbvIocL0ZmL4okHkEvjOnG1QWIbJiTJZg"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/movie/a77e0026-5a7d-4ed0-9dd3-527c3cc42cca"
+					},
+					"response": [
+						{
+							"name": "DELETE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/movie/a77e0026-5a7d-4ed0-9dd3-527c3cc42cca"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Oct 2025 02:46:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Berhasil menghapus film\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "register",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"test\",\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"test123\",\r\n    \"confirm_password\":\"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

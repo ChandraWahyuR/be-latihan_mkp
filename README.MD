@@ -1,12 +1,12 @@
 # A. System Design
 ## 1. Flowchart Sistem
-![alt text](https://drive.google.com/file/d/1W5zs4yOAjy2imEnnazCYxz1GMbBtSTta/view?usp=drive_link)
+`./assets/dokumentation/image/Flowchart_Bioskop.drawio.png`
 
 ##  2. 
 Status awal tiket adalah avaible dan saat tiket dibeli, ubah status menjadi pending. Jika pembayaran berhasil status menjadi succes. jika gagal status failed dan terlalu lama sampai waktu kadaluarsa tiket tidak dibayar, status akan expired. Tiket yang expired atau gagal akan di update statusnya lewat cron job menjadi avaible sehingga bisa dibeli lagi. Jika refund status yang succes tadi di perbarui menjadi avaible.
 
 # B. Database Design
-![alt text](https://drive.google.com/drive/folders/1WhVhRjn4lvLxZoT5MPyl0NVbZFFaYA5G?usp=sharing)
+`./assets/dokumentation/image/ERD_Bioskop.drawio.png`
 
 # C. Project
 Database migration on folder db
@@ -42,4 +42,4 @@ go run cmd/web/main.go
 
 
 ## Postman File Export
-https://drive.google.com/file/d/1wPHUvgkgUrZxDCOvPt3wLWZFtOx1griM/view?usp=sharing
+`./assets/dokumentation/postman/be_latihan_mkp.postman_collection.json`
