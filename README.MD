@@ -43,3 +43,20 @@ go run cmd/web/main.go
 
 ## Postman File Export
 [Download Postman Collection](./assets/dokumentation/postman/be_latihan_mkp.postman_collection.json)
+
+
+## Step by Step Use Endpoint
+On folder register
+1. Register
+2. Login
+
+From here this endpoint use authorization jwt, Bearer <token>
+On folder movie
+3. Create movie
+4. Get movie id from get all
+
+On folder studios
+5. Create studio 
+
+than go to folder movie
+6. Get Detailed movie
