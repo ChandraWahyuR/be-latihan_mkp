@@ -46,17 +46,17 @@ go run cmd/web/main.go
 
 
 ## Step by Step Use Endpoint
-On folder register
+### On folder register
 1. Register
 2. Login
 
 From here this endpoint use authorization jwt, Bearer <token>
-On folder movie
+### On folder movie
 3. Create movie
 4. Get movie id from get all
 
-On folder studios
+### On folder studios
 5. Create studio 
 
-than go to folder movie
+### than go to folder movie
 6. Get Detailed movie
