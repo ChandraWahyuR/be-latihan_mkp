@@ -1,0 +1,11 @@
+{
+  "portServer": ,
+  "database": {
+    "host": "",
+    "port": ,
+    "name": "",
+    "username": "",
+    "password": ""
+  },
+  "jwtSecretKey": ""
+}
