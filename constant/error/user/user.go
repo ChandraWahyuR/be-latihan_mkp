@@ -1,4 +1,4 @@
-package user
+package movie
 
 import "errors"
 
@@ -12,9 +12,3 @@ var (
 	ErrFieldPasswordEmpty   = errors.New("field password is empty")
 	ErrFormatEmail          = errors.New("format email is not correct")
 )
-
-var UserErrors = []error{
-	ErrUserNotFound,
-	ErrPasswordInCorrect,
-	ErrPasswordDoesNotMatch,
-}

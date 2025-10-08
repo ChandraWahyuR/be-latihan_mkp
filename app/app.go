@@ -24,17 +24,25 @@ type BootstrapConfig struct {
 func App(config *BootstrapConfig) {
 	// repo
 	userRepo := repository.NewUserRepository(config.DB, config.Log)
+	movieRepo := repository.NewMoviesRepository(config.DB)
+	jadwalTayangRepo := repository.NewJadwalTayangRepository(config.DB)
 
 	// usecase
 	userUc := usecase.NewUserUsecase(config.Log, userRepo, config.JWT)
+	movieUc := usecase.NewMoviesUsecase(movieRepo)
+	JadwalTayangUc := usecase.NewJadwalTayangUsecase(jadwalTayangRepo, movieRepo)
 
 	// handler
 	userDlv := handler.NewUserHandler(config.JWT, userUc)
+	movieDlv := handler.NewMovieHandler(movieUc)
+	JadwalTayangDlv := handler.NewJadwalTayangHandler(JadwalTayangUc)
 
 	routeConfig := routes.RouteConfig{
-		App:            config.App,
-		UserController: userDlv,
-		JWT:            config.JWT,
+		App:                    config.App,
+		UserController:         userDlv,
+		MovieController:        movieDlv,
+		JadwalTayangController: JadwalTayangDlv,
+		JWT:                    config.JWT,
 	}
 
 	routeConfig.Setup()

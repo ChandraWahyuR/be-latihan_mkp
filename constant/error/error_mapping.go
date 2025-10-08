@@ -8,29 +8,38 @@ import (
 )
 
 func ConvertErrorToCode(err error) int {
+	switch {
 	// 400
-	if errors.Is(err, errUsr.ErrFieldEmailEmpty) ||
+	case errors.Is(err, ErrFieldEmpty) ||
+		errors.Is(err, ErrIDEmpty) ||
+		errors.Is(err, ErrInvalidTime) ||
+		errors.Is(err, errUsr.ErrFieldEmailEmpty) ||
 		errors.Is(err, errUsr.ErrFieldNameEmpty) ||
 		errors.Is(err, errUsr.ErrFieldPasswordEmpty) ||
 		errors.Is(err, errUsr.ErrFormatEmail) ||
-		errors.Is(err, errUsr.ErrPasswordDoesNotMatch) {
+		errors.Is(err, errUsr.ErrPasswordDoesNotMatch):
 		return http.StatusBadRequest
-	}
 
 	// 401
-	if errors.Is(err, errUsr.ErrPasswordInCorrect) {
+	case errors.Is(err, ErrUnauthorized) ||
+		errors.Is(err, ErrInvalidToken) ||
+		errors.Is(err, errUsr.ErrPasswordInCorrect):
 		return http.StatusUnauthorized
-	}
+
+	// 403
+	case errors.Is(err, ErrForbidden):
+		return http.StatusForbidden
 
 	// 404
-	if errors.Is(err, errUsr.ErrUserNotFound) {
+	case errors.Is(err, ErrNotFound) ||
+		errors.Is(err, errUsr.ErrUserNotFound):
 		return http.StatusNotFound
-	}
 
 	// 409
-	if errors.Is(err, errUsr.ErrEmailExist) {
+	case errors.Is(err, errUsr.ErrEmailExist):
 		return http.StatusConflict
-	}
 
-	return http.StatusInternalServerError
+	default:
+		return http.StatusInternalServerError
+	}
 }

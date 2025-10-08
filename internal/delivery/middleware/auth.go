@@ -4,6 +4,8 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/ChandraWahyuR/be-latihan_mkp/common/response"
+	"github.com/ChandraWahyuR/be-latihan_mkp/constant"
 	"github.com/ChandraWahyuR/be-latihan_mkp/internal/auth/jwt"
 	"github.com/gin-gonic/gin"
 )
@@ -43,4 +45,8 @@ func GetUser(ctx *gin.Context) (*jwt.JWTCustomClaims, bool) {
 		return nil, false
 	}
 	return user, true
+}
+
+func HandleUnauthorizedError(c *gin.Context) {
+	c.AbortWithStatusJSON(http.StatusUnauthorized, response.ResponseHandler(constant.Error, "Unauthorized", nil))
 }
