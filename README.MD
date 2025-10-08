@@ -2,7 +2,7 @@
 ## 1. Flowchart Sistem
 ![Flowchart Sistem](./assets/dokumentation/image/Flowchart_Bioskop.drawio.png)
 
-##  2. 
+##  2. Solusi Pembelian Tiket
 Status awal tiket adalah avaible dan saat tiket dibeli, ubah status menjadi pending. Jika pembayaran berhasil status menjadi succes. jika gagal status failed dan terlalu lama sampai waktu kadaluarsa tiket tidak dibayar, status akan expired. Tiket yang expired atau gagal akan di update statusnya lewat cron job menjadi avaible sehingga bisa dibeli lagi. Jika user melakukan refund, status yang succes tadi di perbarui menjadi avaible.
 
 # B. Database Design
